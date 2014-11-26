@@ -46,7 +46,7 @@ end
 main_st = Apartment.new
 puts main_st.add_apartments
 
-
+#hi
 
 # mo = Person.new('Mo', 24, 'male')
 # puts mo.name
