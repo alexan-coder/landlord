@@ -3,46 +3,55 @@ class Apartment
 	attr_accessor :address, :monthly_rent, :sqft, :num_beds, :num_baths, :renters
 
 	def initialize #(apartment_name)
-		# @apartment_name = apparment_name
 		@address = ''
 		@monthly_rent = ''
 		@sqft = ''
 		@num_beds = ''
 		@num_baths = ''
 		@renters = ''
+		@apartment_name = ''
 		# appartment_hash = {}
 	end
 
 	def add_apartments
-		apartment_hash = {}
+		puts "what would you like to name this apartment?"
+		apartment_name = gets.chomp
+		@apartment_name = apartment_name
+		puts "You entered #{@apartment_name}"
+
 		puts "What is the address?"
 		address = gets.chomp
 		@address = address
 		puts "You entered #{@address}."
+
 		puts "What is the rent?"
 		rent = gets.chomp.to_i
 		@monthly_rent = rent
 		puts "You entered #{@monthly_rent}."
+
 		puts "What is the sqft?"
 		sqft = gets.chomp.to_i
 		@sqft = sqft
 		puts "You entered #{@sqft}."
+
 		puts "What is the number of beds?"
 		num_beds = gets.chomp.to_i
 		@num_beds = num_beds
 		puts "You entered #{@num_beds}."
+
 		puts "What is the number of baths?"
 		num_baths = gets.chomp.to_i
 		@num_baths = num_baths
 		puts "You entered #{@num_baths}."
+
 		puts "What is the number of renters?"
 		renters = gets.chomp.to_i
 		@renters = renters
 		puts "You entered #{@renters}."
 
 		total_apartments = []
-		
-
+		apartment_hash = {}
+		apartment_hash[:apartment_name] = @apartment_name
 		apartment_hash[:address] = @address
 		apartment_hash[:monthly_rent] = @monthly_rent
 		apartment_hash[:sqft] = @sqft
